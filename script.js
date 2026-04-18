@@ -324,9 +324,18 @@ function saveCartToStorage() {
 function loadCartFromStorage() {
     const savedCart = localStorage.getItem('arete-cart');
     if (savedCart) {
-        app.cart = JSON.parse(savedCart);
+        try {
+            app.cart = JSON.parse(savedCart);
+            updateCartUI();
+        } catch (error) {
+            console.error('Error loading cart from storage:', error);
+            app.cart = [];
+        }
+    } else {
+        app.cart = [];
     }
 }
+
 
 // ===== PRODUCT FUNCTIONS =====
 function renderCategories() {
@@ -752,3 +761,69 @@ const notificationStyles = `
 const styleSheet = document.createElement('style');
 styleSheet.textContent = notificationStyles;
 document.head.appendChild(styleSheet);
+
+// ===== INITIALIZATION =====
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM loaded, initializing app...');
+    
+    // Load cart from storage
+    loadCartFromStorage();
+    
+    // Set up event listeners
+    setupEventListeners();
+    
+    // Render products
+    renderProducts();
+    
+    // Hide loading screen
+    setTimeout(() => {
+        elements.loadingScreen.style.display = 'none';
+        app.isLoading = false;
+    }, 1000);
+    
+    console.log('App initialized successfully');
+});
+
+function setupEventListeners() {
+    // Cart toggle
+    elements.cartBtn.addEventListener('click', toggleCart);
+    elements.cartClose.addEventListener('click', toggleCart);
+    
+    // Checkout
+    elements.checkoutBtn.addEventListener('click', openCheckout);
+    elements.checkoutClose.addEventListener('click', closeCheckout);
+    elements.checkoutBack.addEventListener('click', handleCheckoutBack);
+    elements.checkoutNext.addEventListener('click', handleCheckoutNext);
+    elements.checkoutPay.addEventListener('click', handlePayment);
+    
+    // Forms
+    elements.checkoutForm.addEventListener('submit', handleCheckoutSubmit);
+    elements.contactForm.addEventListener('submit', handleContactForm);
+    
+    // Filters
+    elements.categoryFilter.addEventListener('change', handleCategoryFilter);
+    elements.sortFilter.addEventListener('change', handleSortFilter);
+    
+    // Lightbox
+    elements.lightboxClose.addEventListener('click', closeLightbox);
+    elements.lightbox.addEventListener('click', function(e) {
+        if (e.target === elements.lightbox) {
+            closeLightbox();
+        }
+    });
+    
+    // Success modal
+    elements.successClose.addEventListener('click', closeSuccessModal);
+    
+    // Mobile menu
+    elements.mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    
+    // Close cart when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!elements.cartSidebar.contains(e.target) && 
+            !elements.cartBtn.contains(e.target) && 
+            elements.cartSidebar.classList.contains('open')) {
+            toggleCart();
+        }
+    });
+}
