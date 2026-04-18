@@ -13,8 +13,8 @@ const app = {
 // ===== PRODUCTS DATA =====
 const productsData = [
     { id: 1, nombre: "Llavero", categoria: "Llaveros", precio: 1500, imagen: "llaveros.jpg" },
-    { id: 2, nombre: "Llavero cruz", categoria: "Llaveros", precio: 1800, imagen: "llavero cruz.jpg" },
-    { id: 3, nombre: "Movil osito", categoria: "Movil", precio: 3500, imagen: "moviles osito.jpg" },
+    { id: 2, nombre: "Llavero cruz", categoria: "Llaveros", precio: 1800, imagen: "llavero%20cruz.jpg" },
+    { id: 3, nombre: "Movil osito", categoria: "Movil", precio: 3500, imagen: "moviles%20osito.jpg" },
     { id: 4, nombre: "Moviles", categoria: "Movil", precio: 3200, imagen: "mowiles.jpeg" },
     { id: 5, nombre: "Moviles", categoria: "Movil", precio: 3200, imagen: "movilkes.jpeg" },
     { id: 6, nombre: "Moviles", categoria: "Movil", precio: 3200, imagen: "mobiles.jpeg" },
@@ -25,62 +25,62 @@ const productsData = [
     { id: 11, nombre: "Moviles", categoria: "Movil", precio: 3200, imagen: "mowilkes3.jpeg" },
     { id: 12, nombre: "Moviles", categoria: "Movil", precio: 3200, imagen: "moviles22.jpeg" },
     { id: 13, nombre: "Moviles", categoria: "Movil", precio: 3200, imagen: "moviles33.jpeg" },
-    { id: 14, nombre: "Mate mini esculturitas", categoria: "Mini esculturitas", precio: 2800, imagen: "mate mini escultura.jpg" },
-    { id: 15, nombre: "Mate mini esculturitas", categoria: "Mini esculturitas", precio: 2800, imagen: "mate mini escultutita.jpeg" },
-    { id: 16, nombre: "Llavero personalizado", categoria: "Llaveros", precio: 2000, imagen: "pili llavero.jpeg" },
-    { id: 17, nombre: "Aritos vitrofusión", categoria: "Bijou", precio: 2500, imagen: "aros en vitrofusion.jpg" },
-    { id: 18, nombre: "Conjunto bijou", categoria: "Bijou", precio: 4500, imagen: "conjuntos bijou.jpg" },
-    { id: 19, nombre: "Arito + anillo", categoria: "Bijou", precio: 3800, imagen: "conjunto arito y anillo.jpg" },
+    { id: 14, nombre: "Mate mini esculturitas", categoria: "Mini esculturitas", precio: 2800, imagen: "mate%20mini%20escultura.jpg" },
+    { id: 15, nombre: "Mate mini esculturitas", categoria: "Mini esculturitas", precio: 2800, imagen: "mate%20mini%20escultutita.jpeg" },
+    { id: 16, nombre: "Llavero personalizado", categoria: "Llaveros", precio: 2000, imagen: "pili%20llavero.jpeg" },
+    { id: 17, nombre: "Aritos vitrofusión", categoria: "Bijou", precio: 2500, imagen: "aros%20en%20vitrofusion.jpg" },
+    { id: 18, nombre: "Conjunto bijou", categoria: "Bijou", precio: 4500, imagen: "conjuntos%20bijou.jpg" },
+    { id: 19, nombre: "Arito + anillo", categoria: "Bijou", precio: 3800, imagen: "conjunto%20arito%20y%20anillo.jpg" },
     { id: 20, nombre: "Bijou", categoria: "Bijou", precio: 2200, imagen: "bijouuuu.jpeg" },
     { id: 21, nombre: "Arito + anillo", categoria: "Bijou", precio: 3800, imagen: "bijouclg.jpeg" },
-    { id: 22, nombre: "Plato redondo", categoria: "Platos", precio: 4200, imagen: "plato redondo.jpg" },
-    { id: 23, nombre: "Plato cuadrado", categoria: "Platos", precio: 4500, imagen: "plato matecito.jpg" },
-    { id: 24, nombre: "Plato Guembe", categoria: "Platos", precio: 4800, imagen: "plato guembe.jpg" },
-    { id: 25, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img plato1.jpeg" },
-    { id: 26, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img plato2.jpeg" },
-    { id: 27, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img plato3.jpeg" },
-    { id: 28, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img plato4.jpeg" },
-    { id: 29, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img plato5.jpeg" },
-    { id: 30, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img plato6.jpeg" },
-    { id: 31, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espiral.jpg" },
+    { id: 22, nombre: "Plato redondo", categoria: "Platos", precio: 4200, imagen: "plato%20redondo.jpg" },
+    { id: 23, nombre: "Plato cuadrado", categoria: "Platos", precio: 4500, imagen: "plato%20matecito.jpg" },
+    { id: 24, nombre: "Plato Guembe", categoria: "Platos", precio: 4800, imagen: "plato%20guembe.jpg" },
+    { id: 25, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img%20plato1.jpeg" },
+    { id: 26, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img%20plato2.jpeg" },
+    { id: 27, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img%20plato3.jpeg" },
+    { id: 28, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img%20plato4.jpeg" },
+    { id: 29, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img%20plato5.jpeg" },
+    { id: 30, nombre: "Platos", categoria: "Platos", precio: 4000, imagen: "img%20plato6.jpeg" },
+    { id: 31, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espiral.jpg" },
     { id: 32, nombre: "Mate mini esculturita", categoria: "Mini esculturitas", precio: 2800, imagen: "esculturitamate.jpeg" },
-    { id: 33, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales1.jpeg" },
-    { id: 34, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales2.jpeg" },
-    { id: 35, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales3.jpeg" },
-    { id: 36, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales4.jpeg" },
-    { id: 37, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales5.jpeg" },
-    { id: 38, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales6.jpeg" },
-    { id: 39, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales7.jpeg" },
-    { id: 40, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales8.jpeg" },
-    { id: 41, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta espirales9.jpeg" },
-    { id: 42, nombre: "Bacha para baño", categoria: "Decoración", precio: 8500, imagen: "bacha apra baño.jpg" },
-    { id: 43, nombre: "Fuente circular enrejada", categoria: "Fuente Y Posatorta", precio: 5500, imagen: "fuente circular enrejada.jpg" },
-    { id: 44, nombre: "Centro de mesa", categoria: "Decoración", precio: 4500, imagen: "centro de mesa.jpg" },
-    { id: 45, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente enrejada1.jpeg" },
-    { id: 46, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada2.jpeg" },
-    { id: 47, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada3.jpeg" },
-    { id: 48, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada4.jpeg" },
-    { id: 49, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente enrejada5.jpeg" },
-    { id: 50, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada6.jpeg" },
-    { id: 51, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada7.jpeg" },
-    { id: 52, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada8.jpeg" },
-    { id: 53, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente enrejada9.jpeg" },
-    { id: 54, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente enrejada10.jpeg" },
-    { id: 55, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada11.jpeg" },
-    { id: 56, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada12.jpeg" },
-    { id: 57, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada13.jpeg" },
-    { id: 58, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente enrejada14.jpeg" },
-    { id: 59, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada15.jpeg" },
-    { id: 60, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada16.jpeg" },
-    { id: 61, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada17.jpeg" },
-    { id: 62, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente enrejada18.jpeg" },
-    { id: 63, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta sahumerios1.jpeg" },
-    { id: 64, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta sahumerios2.jpeg" },
-    { id: 65, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta sahumerios3.jpeg" },
-    { id: 66, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta sahumerios4.jpeg" },
-    { id: 67, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta sahumerios5.jpeg" },
-    { id: 68, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta sahumerios6.jpeg" },
-    { id: 69, nombre: "Porta Maceta", categoria: "Diseños", precio: 3800, imagen: "porta mecetas o fanal.jpg" },
+    { id: 33, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales1.jpeg" },
+    { id: 34, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales2.jpeg" },
+    { id: 35, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales3.jpeg" },
+    { id: 36, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales4.jpeg" },
+    { id: 37, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales5.jpeg" },
+    { id: 38, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales6.jpeg" },
+    { id: 39, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales7.jpeg" },
+    { id: 40, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales8.jpeg" },
+    { id: 41, nombre: "Porta espiral", categoria: "Portadores", precio: 3500, imagen: "porta%20espirales9.jpeg" },
+    { id: 42, nombre: "Bacha para baño", categoria: "Decoración", precio: 8500, imagen: "bacha%20apra%20baño.jpg" },
+    { id: 43, nombre: "Fuente circular enrejada", categoria: "Fuente Y Posatorta", precio: 5500, imagen: "fuente%20circular%20enrejada.jpg" },
+    { id: 44, nombre: "Centro de mesa", categoria: "Decoración", precio: 4500, imagen: "centro%20de%20mesa.jpg" },
+    { id: 45, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente%20enrejada1.jpeg" },
+    { id: 46, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada2.jpeg" },
+    { id: 47, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada3.jpeg" },
+    { id: 48, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada4.jpeg" },
+    { id: 49, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente%20enrejada5.jpeg" },
+    { id: 50, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada6.jpeg" },
+    { id: 51, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada7.jpeg" },
+    { id: 52, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada8.jpeg" },
+    { id: 53, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente%20enrejada9.jpeg" },
+    { id: 54, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente%20enrejada10.jpeg" },
+    { id: 55, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada11.jpeg" },
+    { id: 56, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada12.jpeg" },
+    { id: 57, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada13.jpeg" },
+    { id: 58, nombre: "Posatorta", categoria: "Fuente Y Posatorta", precio: 3200, imagen: "fuente%20enrejada14.jpeg" },
+    { id: 59, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada15.jpeg" },
+    { id: 60, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada16.jpeg" },
+    { id: 61, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada17.jpeg" },
+    { id: 62, nombre: "Fuentes", categoria: "Fuente Y Posatorta", precio: 3500, imagen: "fuente%20enrejada18.jpeg" },
+    { id: 63, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta%20sahumerios1.jpeg" },
+    { id: 64, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta%20sahumerios2.jpeg" },
+    { id: 65, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta%20sahumerios3.jpeg" },
+    { id: 66, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta%20sahumerios4.jpeg" },
+    { id: 67, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta%20sahumerios5.jpeg" },
+    { id: 68, nombre: "Porta Sahumerios", categoria: "Porta Sahumerios", precio: 2500, imagen: "porta%20sahumerios6.jpeg" },
+    { id: 69, nombre: "Porta Maceta", categoria: "Diseños", precio: 3800, imagen: "porta%20mecetas%20o%20fanal.jpg" },
     { id: 70, nombre: "Escarapelas", categoria: "Diseños", precio: 1500, imagen: "escarapelas.jpg" },
     { id: 71, nombre: "Tutores", categoria: "Diseños", precio: 2200, imagen: "padres.jpeg" },
     { id: 72, nombre: "Tutores", categoria: "Diseños", precio: 2200, imagen: "tutores.jpeg" }
@@ -280,10 +280,13 @@ function updateCartUI() {
             </div>
         `;
     } else {
-        elements.cartItems.innerHTML = app.cart.map(item => `
+        elements.cartItems.innerHTML = app.cart.map(item => {
+            const encodedImage = encodeImagePath(item.imagen);
+            return `
             <div class="cart-item">
                 <div class="cart-item-image">
-                    <img src="${item.imagen}" alt="${item.nombre}">
+                    <img src="${encodedImage}" alt="${item.nombre}" 
+                         onerror="this.src='https://via.placeholder.com/80x80?text=No+img'">
                 </div>
                 <div class="cart-item-details">
                     <div class="cart-item-name">${item.nombre}</div>
@@ -305,7 +308,8 @@ function updateCartUI() {
                     </div>
                 </div>
             </div>
-        `).join('');
+        `;
+        }).join('');
     }
     
     // Update total
@@ -346,13 +350,20 @@ function renderCategories() {
     `).join('');
 }
 
+function encodeImagePath(imagePath) {
+    return imagePath.replace(/ /g, '%20').replace(/ñ/g, '%C3%B1').replace(/á/g, '%C3%A1').replace(/é/g, '%C3%A9').replace(/í/g, '%C3%AD').replace(/ó/g, '%C3%B3').replace(/ú/g, '%C3%BA');
+}
+
 function renderProducts() {
     let filteredProducts = getFilteredProducts();
     
-    elements.productsGrid.innerHTML = filteredProducts.map(product => `
+    elements.productsGrid.innerHTML = filteredProducts.map(product => {
+        const encodedImage = encodeImagePath(product.imagen);
+        return `
         <div class="product-card" data-category="${product.categoria}">
-            <div class="product-image" onclick="openLightbox('${product.imagen}')">
-                <img src="${product.imagen}" alt="${product.nombre}" loading="lazy">
+            <div class="product-image" onclick="openLightbox('${encodedImage}')">
+                <img src="${encodedImage}" alt="${product.nombre}" loading="lazy" 
+                     onerror="this.src='https://via.placeholder.com/300x200?text=Imagen+no+disponible'">
             </div>
             <div class="product-content">
                 <div class="product-category">${product.categoria}</div>
@@ -367,7 +378,8 @@ function renderProducts() {
                 </div>
             </div>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 function getFilteredProducts() {

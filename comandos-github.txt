@@ -1,0 +1,6 @@
+# Ejecuta estos comandos en tu terminal (reemplaza TU-USUARIO):
+git remote add origin https://github.com/TU-USUARIO/arete-galeria-arte.git
+git branch -M main
+git push -u origin main
+
+# NOTA: Reemplaza TU-USUARIO con tu nombre de usuario de GitHub
