@@ -2388,18 +2388,8 @@
         }
 
         // ===== MERCADO PAGO CONFIGURATION =====
-        fetch('/api/mercadopago/config')
-            .then(response => response.json())
-            .then(data => {
-                if (data.publicKey) {
-                    const mp = new MercadoPago(data.publicKey, {
-                        locale: 'es-AR'
-                    });
-                }
-            })
-            .catch(error => {
-                console.error('Error loading Mercado Pago config:', error);
-            });
+        // Mercado Pago se inicializará cuando se necesite
+        console.log('Mercado Pago ready when needed');
     </script>
 </body>
 </html>
