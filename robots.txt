@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Allow search engines to crawl all content
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.css$
+Allow: /*.js$
+
+# Block admin and API endpoints from being indexed
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://arete.com.ar/sitemap.xml
+
+# Crawl delay (optional, reduces server load)
+Crawl-delay: 1
