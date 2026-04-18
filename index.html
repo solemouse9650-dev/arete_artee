@@ -1897,11 +1897,9 @@
         }
 
         function updateCartUI() {
-            // Update cart count
             const totalItems = app.cart.reduce((sum, item) => sum + item.quantity, 0);
             elements.cartCount.textContent = totalItems;
             
-            // Update cart items
             if (app.cart.length === 0) {
                 elements.cartItems.innerHTML = `
                     <div class="cart-empty">
@@ -1942,7 +1940,6 @@
                 }).join('');
             }
             
-            // Update total
             const total = app.cart.reduce((sum, item) => sum + (item.precio * item.quantity), 0);
             elements.totalAmount.textContent = `$${total.toLocaleString()}`;
         }
@@ -1974,13 +1971,11 @@
         function renderCategories() {
             const categories = Object.keys(app.categories);
             
-            // Populate category filter
             elements.categoryFilter.innerHTML = `
                 <option value="all">Todas las categorías</option>
                 ${categories.map(cat => `<option value="${cat}">${cat}</option>`).join('')}
             `;
             
-            // Render category cards
             elements.categoriesGrid.innerHTML = categories.map(category => `
                 <div class="category-card" data-category="${category}" onclick="filterByCategory('${category}')">
                     <div class="category-icon">
@@ -2023,12 +2018,10 @@
         function getFilteredProducts() {
             let filtered = [...app.products];
             
-            // Filter by category
             if (app.currentCategory !== 'all') {
                 filtered = filtered.filter(product => product.categoria === app.currentCategory);
             }
             
-            // Sort products
             switch (app.currentSort) {
                 case 'price-low':
                     filtered.sort((a, b) => a.precio - b.precio);
@@ -2048,7 +2041,6 @@
             app.currentCategory = category;
             elements.categoryFilter.value = category;
             
-            // Update active category card
             document.querySelectorAll('.category-card').forEach(card => {
                 card.classList.toggle('active', card.dataset.category === category);
             });
@@ -2059,7 +2051,6 @@
         function handleCategoryFilter(e) {
             app.currentCategory = e.target.value;
             
-            // Update active category card
             document.querySelectorAll('.category-card').forEach(card => {
                 card.classList.toggle('active', card.dataset.category === app.currentCategory);
             });
@@ -2090,20 +2081,16 @@
         }
 
         function updateCheckoutStep() {
-            // Hide all steps
             document.querySelectorAll('.step').forEach(step => {
                 step.classList.remove('active');
             });
             
-            // Show current step
             document.getElementById(`step-${app.checkoutStep}`).classList.add('active');
             
-            // Update buttons
             elements.checkoutBack.style.display = app.checkoutStep > 1 ? 'block' : 'none';
             elements.checkoutNext.style.display = app.checkoutStep < 3 ? 'block' : 'none';
             elements.checkoutPay.style.display = app.checkoutStep === 3 ? 'block' : 'none';
             
-            // Update order summary if on step 3
             if (app.checkoutStep === 3) {
                 updateOrderSummary();
             }
@@ -2118,7 +2105,6 @@
 
         function handleCheckoutNext() {
             if (app.checkoutStep === 1) {
-                // Validate step 1
                 const form = elements.checkoutForm;
                 if (!form.checkValidity()) {
                     form.reportValidity();
@@ -2184,7 +2170,6 @@
                     }
                 };
                 
-                // Call backend to create Mercado Pago preference
                 const response = await fetch('/api/mercadopago/create-preference', {
                     method: 'POST',
                     headers: {
@@ -2196,7 +2181,6 @@
                 const data = await response.json();
                 
                 if (data.init_point) {
-                    // Redirect to Mercado Pago
                     window.location.href = data.init_point;
                 } else {
                     throw new Error('Error al generar preferencia de pago');
@@ -2225,7 +2209,6 @@
                     payment_method: 'efectivo'
                 };
                 
-                // Send order to backend
                 const response = await fetch('/api/orders', {
                     method: 'POST',
                     headers: {
@@ -2277,7 +2260,6 @@
         }
 
         function showNotification(message, type = 'info') {
-            // Create notification element
             const notification = document.createElement('div');
             notification.className = `notification notification-${type}`;
             notification.innerHTML = `
@@ -2285,7 +2267,6 @@
                 <span>${message}</span>
             `;
             
-            // Add styles
             notification.style.cssText = `
                 position: fixed;
                 top: 20px;
@@ -2304,7 +2285,6 @@
             
             document.body.appendChild(notification);
             
-            // Remove after 3 seconds
             setTimeout(() => {
                 notification.style.animation = 'slideOut 0.3s ease';
                 setTimeout(() => {
@@ -2324,7 +2304,6 @@
             };
             
             try {
-                // Send contact form data
                 const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
@@ -2349,10 +2328,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             console.log('DOM loaded, initializing app...');
             
-            // Initialize products and categories
             app.products = productsData;
             
-            // Group products by category
             app.categories = {};
             app.products.forEach(product => {
                 if (!app.categories[product.categoria]) {
@@ -2361,17 +2338,11 @@
                 app.categories[product.categoria].push(product);
             });
             
-            // Load cart from storage
             loadCartFromStorage();
-            
-            // Set up event listeners
             setupEventListeners();
-            
-            // Render UI
             renderCategories();
             renderProducts();
             
-            // Hide loading screen
             setTimeout(() => {
                 elements.loadingScreen.style.display = 'none';
                 app.isLoading = false;
@@ -2381,26 +2352,21 @@
         });
 
         function setupEventListeners() {
-            // Cart toggle
             elements.cartBtn.addEventListener('click', toggleCart);
             elements.cartClose.addEventListener('click', toggleCart);
             
-            // Checkout
             elements.checkoutBtn.addEventListener('click', openCheckout);
             elements.checkoutClose.addEventListener('click', closeCheckout);
             elements.checkoutBack.addEventListener('click', handleCheckoutBack);
             elements.checkoutNext.addEventListener('click', handleCheckoutNext);
             elements.checkoutPay.addEventListener('click', handlePayment);
             
-            // Forms
             elements.checkoutForm.addEventListener('submit', handleCheckoutSubmit);
             elements.contactForm.addEventListener('submit', handleContactForm);
             
-            // Filters
             elements.categoryFilter.addEventListener('change', handleCategoryFilter);
             elements.sortFilter.addEventListener('change', handleSortFilter);
             
-            // Lightbox
             elements.lightboxClose.addEventListener('click', closeLightbox);
             elements.lightbox.addEventListener('click', function(e) {
                 if (e.target === elements.lightbox) {
@@ -2408,13 +2374,10 @@
                 }
             });
             
-            // Success modal
             elements.successClose.addEventListener('click', closeSuccessModal);
             
-            // Mobile menu
             elements.mobileMenuToggle.addEventListener('click', toggleMobileMenu);
             
-            // Close cart when clicking outside
             document.addEventListener('click', function(e) {
                 if (!elements.cartSidebar.contains(e.target) && 
                     !elements.cartBtn.contains(e.target) && 
@@ -2425,7 +2388,6 @@
         }
 
         // ===== MERCADO PAGO CONFIGURATION =====
-        // Load Mercado Pago configuration
         fetch('/api/mercadopago/config')
             .then(response => response.json())
             .then(data => {
